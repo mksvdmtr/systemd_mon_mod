@@ -4,13 +4,13 @@ $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 require 'systemd_mon/version'
 
 Gem::Specification.new do |spec|
-  spec.name          = "systemd_mon"
+  spec.name          = "systemd_mon_mod"
   spec.version       = SystemdMon::VERSION
-  spec.authors       = ["Jon Cairns"]
-  spec.email         = ["jon@joncairns.com"]
+  spec.authors       = ["Jon Cairns", "Dmitriy Maksakov"]
+  spec.email         = ["jon@joncairns.com", "mksvdmtr@yandex.ru"]
   spec.summary       = %q{Monitor systemd units and trigger alerts for failed states}
   spec.description   = %q{Monitor systemd units and trigger alerts for failed states}
-  spec.homepage      = "https://github.com/joonty/systemd_mon"
+  spec.homepage      = "https://github.com/mksvdmtr/systemd_mon_mod"
   spec.license       = "MIT"
 
   spec.files         = `git ls-files -z`.split("\x0")

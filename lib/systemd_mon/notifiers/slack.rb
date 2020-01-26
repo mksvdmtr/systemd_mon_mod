@@ -20,7 +20,7 @@ module SystemdMon::Notifiers
     end
 
     def notify_start!(hostname)
-      message = "SystemdMon is starting on #{hostname}"
+      message = "@channel SystemdMon is starting on #{hostname}"
 
       attach = {
         fallback: message,
@@ -32,7 +32,7 @@ module SystemdMon::Notifiers
     end
 
     def notify_stop!(hostname)
-      message = "SystemdMon is stopping on #{hostname}"
+      message = "@channel SystemdMon is stopping on #{hostname}"
 
       attach = {
         fallback: message,
@@ -45,10 +45,10 @@ module SystemdMon::Notifiers
 
     def notify!(notification)
       unit = notification.unit
-      message = "#{notification.type_text}: systemd unit #{unit.name} on #{notification.hostname} #{unit.state_change.status_text}"
+      message = "@channel #{notification.type_text}: systemd unit #{unit.name} on #{notification.hostname} #{unit.state_change.status_text}"
 
       attach = {
-        fallback: "#{message}: #{unit.state.active} (#{unit.state.sub})",
+        fallback: "@channel #{message}: #{unit.state.active} (#{unit.state.sub})",
         color: color(notification.type),
         fields: fields(notification)
       }
