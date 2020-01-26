@@ -8,8 +8,8 @@ Gem::Specification.new do |spec|
   spec.version       = SystemdMon::VERSION
   spec.authors       = ["Jon Cairns", "Dmitriy Maksakov"]
   spec.email         = ["jon@joncairns.com", "mksvdmtr@yandex.ru"]
-  spec.summary       = %q{Monitor systemd units and trigger alerts for failed states}
-  spec.description   = %q{Monitor systemd units and trigger alerts for failed states}
+  spec.summary       = %q{Monitor systemd units and trigger alerts for failed states (Mod for mattermost @channel mentioning)}
+  spec.description   = %q{Monitor systemd units and trigger alerts for failed states (Mod for mattermost @channel mentioning)}
   spec.homepage      = "https://github.com/mksvdmtr/systemd_mon_mod"
   spec.license       = "MIT"
 
