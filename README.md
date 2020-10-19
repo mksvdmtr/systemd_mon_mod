@@ -19,7 +19,7 @@ It works by subscribing to DBus notifications from Systemd. This means that ther
 
 Install the gem using:
 
-    gem install systemd_mon
+    gem install systemd_mon_mod
 
 ## Usage
 
