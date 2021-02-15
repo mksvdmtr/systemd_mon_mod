@@ -47,9 +47,11 @@ module SystemdMon::Notifiers
       unit = notification.unit
       message = "@channel #{notification.type_text}: systemd unit #{unit.name} on #{notification.hostname} #{unit.state_change.status_text}"
 
-      if notification.type == :info
-        message = "#{notification.type_text}: systemd unit #{unit.name} on #{notification.hostname} #{unit.state_change.status_text}"
-      end
+      return if notification.type == :info
+
+      # if notification.type == :info
+      #   message = "#{notification.type_text}: systemd unit #{unit.name} on #{notification.hostname} #{unit.state_change.status_text}"
+      # end
 
       attach = {
         fallback: "@channel #{message}: #{unit.state.active} (#{unit.state.sub})",
